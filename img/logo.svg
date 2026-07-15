@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" role="img" aria-label="Fundación Discover Villajoyosa">
+  <g>
+    <rect x="0"  y="26" width="11" height="30" rx="1.5" fill="#1d5c8f"/>
+    <rect x="13" y="18" width="11" height="38" rx="1.5" fill="#c4442a"/>
+    <rect x="26" y="30" width="11" height="26" rx="1.5" fill="#e39b25"/>
+    <rect x="39" y="22" width="11" height="34" rx="1.5" fill="#2e9e9b"/>
+    <rect x="52" y="33" width="11" height="23" rx="1.5" fill="#4a2c1d"/>
+    <path d="M0 26 L5.5 20 L11 26 Z" fill="#1d5c8f"/>
+    <path d="M13 18 L18.5 12 L24 18 Z" fill="#c4442a"/>
+    <path d="M26 30 L31.5 24 L37 30 Z" fill="#e39b25"/>
+    <path d="M39 22 L44.5 16 L50 22 Z" fill="#2e9e9b"/>
+    <path d="M52 33 L57.5 27 L63 33 Z" fill="#4a2c1d"/>
+  </g>
+  <text x="76" y="34" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="24" fill="#22303c">Discover Villajoyosa</text>
+  <text x="76" y="52" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="3.5" fill="#8a6d55">FUNDACIÓN DE TURISMO</text>
+</svg>

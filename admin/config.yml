@@ -1,0 +1,141 @@
+# =====================================================================
+# Panel de administración — Fundación Discover Villajoyosa
+# Este archivo define qué puede editarse desde /admin.
+# =====================================================================
+
+backend:
+  name: github
+  # >>> CAMBIAR: usuario/nombre del repositorio en GitHub <<<
+  repo: TU-USUARIO/discover-villajoyosa-web
+  branch: main
+  # >>> CAMBIAR: URL del Worker de autenticación (ver GUIA-PUESTA-EN-MARCHA.md) <<<
+  base_url: https://sveltia-cms-auth.TU-SUBDOMINIO.workers.dev
+
+locale: es
+site_url: /
+logo_url: /img/logo.svg
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  # ------------------------------------------------ NOTICIAS
+  - name: noticias
+    label: "Noticias"
+    label_singular: "noticia"
+    folder: "content/noticias"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha de publicación", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Resumen (aparece en los listados)", name: resumen, widget: text, required: false }
+      - { label: "Imagen principal", name: imagen, widget: image, required: false, hint: "Opcional. Recomendado: fotos horizontales de al menos 1200 px de ancho." }
+      - { label: "Texto de la noticia", name: body, widget: markdown }
+
+  # ------------------------------------------------ OFERTAS DE EMPLEO
+  - name: empleo
+    label: "Transparencia · Ofertas de empleo"
+    label_singular: "oferta de empleo"
+    folder: "content/transparencia/empleo"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título de la convocatoria", name: title, widget: string }
+      - { label: "Fecha de publicación", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Estado", name: estado, widget: select, options: ["Abierta", "En proceso", "Cerrada"], default: "Abierta" }
+      - { label: "Fin del plazo de presentación", name: plazo, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, required: false }
+      - { label: "Descripción", name: body, widget: markdown, hint: "Describe el puesto, los requisitos y cómo presentar la candidatura." }
+      - label: "Documentos adjuntos"
+        name: documentos
+        widget: list
+        required: false
+        summary: "{{fields.nombre}}"
+        fields:
+          - { label: "Nombre visible del documento", name: nombre, widget: string }
+          - { label: "Archivo (PDF)", name: archivo, widget: file }
+
+  # ------------------------------------------------ CONTRATACIÓN
+  - name: contratacion
+    label: "Transparencia · Contratación"
+    label_singular: "expediente"
+    folder: "content/transparencia/contratacion"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título del expediente", name: title, widget: string }
+      - { label: "Fecha de publicación", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Número de expediente", name: expediente, widget: string, required: false }
+      - { label: "Estado", name: estado, widget: select, options: ["En licitación", "En evaluación", "Adjudicado", "Formalizado", "Desierto"], default: "En licitación" }
+      - { label: "Importe", name: importe, widget: string, required: false, hint: "Ejemplo: 12.500,00 € (IVA excluido)" }
+      - { label: "Adjudicatario", name: adjudicatario, widget: string, required: false }
+      - { label: "Descripción", name: body, widget: markdown }
+      - label: "Documentos adjuntos"
+        name: documentos
+        widget: list
+        required: false
+        summary: "{{fields.nombre}}"
+        fields:
+          - { label: "Nombre visible del documento", name: nombre, widget: string }
+          - { label: "Archivo (PDF)", name: archivo, widget: file }
+
+  # ------------------------------------------------ DOCUMENTOS
+  - name: documentos
+    label: "Transparencia · Documentos"
+    label_singular: "documento"
+    folder: "content/transparencia/documentos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título del documento", name: title, widget: string }
+      - { label: "Fecha de publicación", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Categoría", name: categoria, widget: select, options: ["Institucional", "Económica", "Normativa", "Convenios"], default: "Institucional" }
+      - { label: "Archivo (PDF)", name: documento, widget: file }
+      - { label: "Descripción breve", name: body, widget: markdown, required: false }
+
+  # ------------------------------------------------ AJUSTES DE LA WEB
+  - name: ajustes
+    label: "Ajustes de la web"
+    files:
+      - name: general
+        label: "Datos de contacto y redes sociales"
+        file: "_data/general.json"
+        fields:
+          - { label: "Nombre de la entidad", name: nombre, widget: string }
+          - { label: "Eslogan / denominación oficial", name: eslogan, widget: string }
+          - { label: "Dirección", name: direccion, widget: string }
+          - { label: "Correo electrónico", name: email, widget: string, required: false }
+          - { label: "Teléfono", name: telefono, widget: string, required: false }
+          - { label: "Instagram (dirección completa)", name: instagram, widget: string, required: false }
+          - { label: "Facebook (dirección completa)", name: facebook, widget: string, required: false }
+          - { label: "X / Twitter (dirección completa)", name: twitter, widget: string, required: false }
+          - { label: "YouTube (dirección completa)", name: youtube, widget: string, required: false }
+          - { label: "Clave de Web3Forms (formulario de contacto)", name: web3forms_key, widget: string, required: false, hint: "Clave gratuita de web3forms.com. Si se deja vacía, la web muestra el correo en lugar del formulario." }
+      - name: portada
+        label: "Textos de la portada"
+        file: "_data/portada.json"
+        fields:
+          - { label: "Título grande de la portada", name: hero_titulo, widget: string }
+          - { label: "Texto bajo el título", name: hero_texto, widget: text }
+          - { label: "Texto '¿Quiénes somos?'", name: que_es, widget: text }
+          - { label: "Cifra 1 — número", name: cifra_1_numero, widget: string }
+          - { label: "Cifra 1 — texto", name: cifra_1_texto, widget: string }
+          - { label: "Cifra 2 — número", name: cifra_2_numero, widget: string }
+          - { label: "Cifra 2 — texto", name: cifra_2_texto, widget: string }
+          - { label: "Cifra 3 — número", name: cifra_3_numero, widget: string }
+          - { label: "Cifra 3 — texto", name: cifra_3_texto, widget: string }
+          - { label: "¿Mostrar aviso destacado en toda la web?", name: aviso_activo, widget: boolean, default: false }
+          - { label: "Texto del aviso destacado", name: aviso_texto, widget: string, required: false }
+      - name: patronato
+        label: "Miembros del Patronato"
+        file: "_data/patronato.json"
+        fields:
+          - label: "Miembros"
+            name: miembros
+            widget: list
+            summary: "{{fields.nombre}} — {{fields.entidad}}"
+            fields:
+              - { label: "Nombre y apellidos", name: nombre, widget: string }
+              - { label: "Cargo", name: cargo, widget: string }
+              - { label: "Entidad", name: entidad, widget: string }

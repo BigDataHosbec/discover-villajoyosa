@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de uso · Web de la Fundación Discover Villajoyosa</title>
+<style>
+  :root { --azul:#1d5c8f; --azul-osc:#123c5c; --rojo:#c4442a; --ocre:#e39b25; --turquesa:#2e9e9b; --choco:#4a2c1d; --crema:#f7f1e6; --tinta:#22303c; }
+  * { box-sizing:border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color:var(--tinta); background:var(--crema); margin:0; line-height:1.7; }
+  .franja { height:8px; background:linear-gradient(to right, var(--azul) 0 20%, var(--rojo) 20% 40%, var(--ocre) 40% 60%, var(--turquesa) 60% 80%, var(--choco) 80% 100%); }
+  .pagina { max-width:820px; margin:0 auto; padding:48px 28px 80px; }
+  h1 { font-size:38px; line-height:1.15; color:var(--azul-osc); margin:8px 0 4px; }
+  .sub { font-family:Arial, sans-serif; font-size:14px; letter-spacing:.15em; text-transform:uppercase; color:var(--rojo); font-weight:bold; }
+  h2 { font-size:26px; color:var(--azul-osc); margin:52px 0 10px; padding-bottom:8px; border-bottom:3px solid var(--ocre); }
+  h3 { font-size:19px; margin:28px 0 8px; color:var(--choco); }
+  p, li { font-size:16.5px; }
+  ol li, ul li { margin-bottom:8px; }
+  .caja { background:#fffdf8; border-radius:12px; padding:20px 24px; border-left:6px solid var(--turquesa); margin:20px 0; box-shadow:0 2px 8px rgba(34,48,60,.06); font-family:Arial, sans-serif; font-size:15px; }
+  .caja.importante { border-left-color:var(--rojo); }
+  .caja b:first-child { color:var(--rojo); }
+  .ruta { font-family:Arial, sans-serif; background:#efe5d2; border-radius:6px; padding:2px 8px; font-size:14.5px; white-space:nowrap; }
+  .paso { counter-increment: paso; }
+  .indice { background:#fffdf8; border-radius:12px; padding:24px 28px; margin-top:32px; box-shadow:0 2px 8px rgba(34,48,60,.06); }
+  .indice a { color:var(--azul); text-decoration:none; }
+  .pie-manual { margin-top:64px; font-family:Arial, sans-serif; font-size:13px; color:#6b7a86; border-top:1px solid #e5d9c3; padding-top:16px; }
+  @media print { body { background:#fff; } .caja { box-shadow:none; } }
+</style>
+</head>
+<body>
+<div class="franja"></div>
+<div class="pagina">
+  <p class="sub">Fundación Discover Villajoyosa</p>
+  <h1>Manual de uso de la web</h1>
+  <p>Cómo publicar noticias, ofertas de empleo, expedientes de contratación y documentos, y cómo cambiar los textos de la web. <strong>No hace falta ningún conocimiento técnico.</strong></p>
+
+  <div class="indice">
+    <b style="font-family:Arial, sans-serif">Índice</b>
+    <ol>
+      <li><a href="#entrar">Entrar en el panel de administración</a></li>
+      <li><a href="#noticia">Publicar una noticia</a></li>
+      <li><a href="#empleo">Publicar una oferta de empleo</a></li>
+      <li><a href="#contratacion">Publicar un expediente de contratación</a></li>
+      <li><a href="#documento">Publicar un documento (estatutos, cuentas, convenios…)</a></li>
+      <li><a href="#textos">Cambiar textos de la portada, contacto y Patronato</a></li>
+      <li><a href="#editar">Corregir o eliminar algo ya publicado</a></li>
+      <li><a href="#usuarios">Dar o quitar acceso a personas del equipo</a></li>
+      <li><a href="#problemas">Si algo no funciona</a></li>
+    </ol>
+  </div>
+
+  <h2 id="entrar">1. Entrar en el panel de administración</h2>
+  <ol>
+    <li>Abre en el navegador: <span class="ruta">www.tu-dominio.com/admin</span> (también hay un enlace «Acceso editores» al pie de la web).</li>
+    <li>Pulsa <b>Sign in with GitHub</b> y entra con tu cuenta de GitHub (la primera vez te pedirá autorizar el acceso: pulsa <b>Authorize</b>).</li>
+    <li>Verás el panel con las secciones: <b>Noticias</b>, <b>Transparencia · Ofertas de empleo</b>, <b>Transparencia · Contratación</b>, <b>Transparencia · Documentos</b> y <b>Ajustes de la web</b>.</li>
+  </ol>
+  <div class="caja"><b>¿Primera vez?</b> Necesitas una cuenta gratuita de GitHub (github.com/signup) y haber aceptado la invitación de colaboración que te habrá llegado por correo. Solo se usa para identificarte: todo el trabajo se hace en el panel.</div>
+
+  <h2 id="noticia">2. Publicar una noticia</h2>
+  <ol>
+    <li>En el panel, entra en <b>Noticias</b> y pulsa <b>Nueva noticia</b>.</li>
+    <li>Rellena el <b>título</b>, la <b>fecha</b> y el <b>resumen</b> (una o dos frases: es lo que se ve en los listados).</li>
+    <li>Si tienes foto, púlsala en <b>Imagen principal → Choose an image → Upload</b>. Mejor fotos horizontales.</li>
+    <li>Escribe el texto en el recuadro grande. Con la barra de herramientas puedes poner negritas, títulos, listas y enlaces.</li>
+    <li>Pulsa <b>Guardar</b> (arriba) y después <b>Publicar → Publicar ahora</b>.</li>
+  </ol>
+  <div class="caja"><b>Importante:</b> mientras no pulses «Publicar ahora», la noticia queda guardada como borrador y no se ve en la web. La web tarda <b>1-2 minutos</b> en mostrar los cambios tras publicar.</div>
+
+  <h2 id="empleo">3. Publicar una oferta de empleo</h2>
+  <ol>
+    <li>Entra en <b>Transparencia · Ofertas de empleo → Nueva oferta de empleo</b>.</li>
+    <li>Rellena el título (p. ej. «Convocatoria para la selección de técnico/a de promoción»), la fecha, el <b>estado</b> («Abierta») y, si lo hay, el fin del plazo.</li>
+    <li>En la descripción, explica el puesto, los requisitos y cómo presentarse.</li>
+    <li>En <b>Documentos adjuntos → Añadir</b>, escribe el nombre visible («Bases de la convocatoria (PDF)») y sube el archivo PDF.</li>
+    <li><b>Guardar → Publicar ahora</b>.</li>
+  </ol>
+  <p>Cuando la convocatoria avance, edita la misma entrada y cambia el estado a «En proceso» o «Cerrada», y añade la resolución como documento adjunto. Así queda todo el histórico publicado.</p>
+
+  <h2 id="contratacion">4. Publicar un expediente de contratación</h2>
+  <ol>
+    <li>Entra en <b>Transparencia · Contratación → Nuevo expediente</b>.</li>
+    <li>Rellena título, fecha, número de expediente, <b>estado</b> («En licitación») y el importe.</li>
+    <li>Describe el objeto del contrato y los plazos, y adjunta los pliegos en PDF.</li>
+    <li><b>Guardar → Publicar ahora</b>.</li>
+    <li>Al adjudicar: edita la entrada, cambia el estado a «Adjudicado» o «Formalizado» y rellena el campo <b>Adjudicatario</b>.</li>
+  </ol>
+
+  <h2 id="documento">5. Publicar un documento</h2>
+  <p>Para estatutos, presupuestos, cuentas anuales, memorias, normativa o convenios:</p>
+  <ol>
+    <li>Entra en <b>Transparencia · Documentos → Nuevo documento</b>.</li>
+    <li>Pon el título (p. ej. «Cuentas anuales 2026»), la fecha y elige la <b>categoría</b>: Institucional, Económica, Normativa o Convenios. La web los agrupa automáticamente.</li>
+    <li>Sube el PDF en <b>Archivo</b> y, si quieres, añade una descripción breve.</li>
+    <li><b>Guardar → Publicar ahora</b>.</li>
+  </ol>
+
+  <h2 id="textos">6. Cambiar textos de la portada, contacto y Patronato</h2>
+  <p>En <b>Ajustes de la web</b> hay tres fichas:</p>
+  <ul>
+    <li><b>Datos de contacto y redes sociales</b>: dirección, correo, teléfono y enlaces a redes. Se actualizan en toda la web (pie de página y página de contacto).</li>
+    <li><b>Textos de la portada</b>: el titular grande, el texto «quiénes somos» y las tres cifras destacadas. Aquí también puedes activar un <b>aviso destacado</b> que aparece en una franja amarilla en toda la web (útil para plazos o comunicados urgentes).</li>
+    <li><b>Miembros del Patronato</b>: añade, edita, reordena (arrastrando) o elimina miembros. Aparecen en la portada y en la página «La Fundación».</li>
+  </ul>
+
+  <h2 id="editar">7. Corregir o eliminar algo ya publicado</h2>
+  <ol>
+    <li>Entra en la sección correspondiente y haz clic sobre la entrada.</li>
+    <li>Corrige lo que necesites y pulsa <b>Guardar → Publicar ahora</b>.</li>
+    <li>Para eliminarla: dentro de la entrada, <b>Eliminar entrada</b> (arriba).</li>
+  </ol>
+  <div class="caja"><b>Sin miedo:</b> todos los cambios quedan guardados en un historial. Si algo se borra o se rompe por error, se puede recuperar cualquier versión anterior de la web (quien administre Cloudflare puede hacerlo en un clic desde «Deployments → Rollback»).</div>
+
+  <h2 id="usuarios">8. Dar o quitar acceso a personas del equipo</h2>
+  <p>Los accesos se gestionan desde GitHub (donde se guarda el contenido de la web), por la persona que administre el repositorio:</p>
+  <ol>
+    <li>La persona nueva se crea una cuenta gratuita en <span class="ruta">github.com/signup</span>.</li>
+    <li>Quien administre entra en el repositorio → <b>Settings → Collaborators → Add people</b> y añade su usuario.</li>
+    <li>La persona acepta la invitación que recibe por correo y ya puede entrar en /admin.</li>
+    <li>Para retirar un acceso: quitar al usuario de <b>Collaborators</b>.</li>
+  </ol>
+
+  <h2 id="problemas">9. Si algo no funciona</h2>
+  <ul>
+    <li><b>No puedo entrar en /admin:</b> comprueba que puedes entrar en github.com con tu usuario (allí puedes recuperar la contraseña) y que aceptaste la invitación de colaboración. Si no, pide a quien administre el repositorio que te la reenvíe.</li>
+    <li><b>He publicado y no veo el cambio:</b> espera 2 minutos y recarga con Ctrl+F5. La web se reconstruye tras cada publicación.</li>
+    <li><b>El PDF no se descarga:</b> comprueba que el archivo se subió en el campo correspondiente y vuelve a publicar la entrada.</li>
+    <li><b>Los mensajes del formulario de contacto</b> llegan al correo con el que se creó la clave de Web3Forms (puede consultarse o cambiarse en web3forms.com).</li>
+  </ul>
+
+  <p class="pie-manual">Web de la Fundación Discover Villajoyosa · Manual de uso del panel de administración · Este documento puede imprimirse.</p>
+</div>
+</body>
+</html>

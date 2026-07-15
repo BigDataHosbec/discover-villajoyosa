@@ -1,0 +1,104 @@
+---
+layout: base.njk
+permalink: /
+---
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>{{ portada.hero_titulo }}</h1>
+      <p>{{ portada.hero_texto }}</p>
+      <div class="hero-acciones">
+        <a class="boton boton-principal" href="/fundacion/">Conoce la Fundación</a>
+        <a class="boton boton-secundario" href="/transparencia/">Portal de transparencia</a>
+      </div>
+    </div>
+    <div class="hero-sello" aria-hidden="true">
+      <strong>2026</strong>
+      <span>Constituida en la<br>Barbera dels Aragonés<br>La Vila Joiosa</span>
+    </div>
+  </div>
+  <div class="hero-casas" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor dos-col">
+    <div>
+      <span class="etiqueta-seccion">Quiénes somos</span>
+      <h2 class="titulo">Colaboración público-privada al servicio del destino</h2>
+      <p class="intro">{{ portada.que_es }}</p>
+      <p class="mt-40"><a class="boton boton-borde" href="/fundacion/">Más sobre la Fundación</a></p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><strong>{{ portada.cifra_1_numero }}</strong><span>{{ portada.cifra_1_texto }}</span></div>
+      <div class="cifra"><strong>{{ portada.cifra_2_numero }}</strong><span>{{ portada.cifra_2_texto }}</span></div>
+      <div class="cifra"><strong>{{ portada.cifra_3_numero }}</strong><span>{{ portada.cifra_3_texto }}</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-alterna">
+  <div class="contenedor">
+    <span class="etiqueta-seccion">Qué hacemos</span>
+    <h2 class="titulo">Seis líneas estratégicas para un destino líder</h2>
+    <div class="lineas">
+      <div class="linea"><span class="num">01</span><h3>Promoción del destino</h3><p>Campañas de promoción turística de Villajoyosa en mercados nacionales e internacionales.</p></div>
+      <div class="linea"><span class="num">02</span><h3>Nuevos productos turísticos</h3><p>Creación de experiencias en torno al patrimonio, las playas, la gastronomía y el chocolate de la Vila.</p></div>
+      <div class="linea"><span class="num">03</span><h3>Sostenibilidad</h3><p>Impulso de un modelo turístico sostenible, respetuoso con el territorio y con quienes lo habitan.</p></div>
+      <div class="linea"><span class="num">04</span><h3>Competitividad</h3><p>Mejora continua de la competitividad del destino dentro de la marca Costa Blanca.</p></div>
+      <div class="linea"><span class="num">05</span><h3>Oportunidades e inversión</h3><p>Identificación y captación de nuevas oportunidades de desarrollo turístico para el municipio.</p></div>
+      <div class="linea"><span class="num">06</span><h3>Alianzas</h3><p>Colaboración con organismos, instituciones y entidades del sector turístico.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor">
+    <span class="etiqueta-seccion">Actualidad</span>
+    <h2 class="titulo">Últimas noticias de la Fundación</h2>
+    <div class="tarjetas-noticias">
+      {% for noticia in collections.noticiasDesc | limit(3) %}
+      <a class="tarjeta-noticia" href="{{ noticia.url }}">
+        <div class="miniatura">
+          {% if noticia.data.imagen %}
+          <img src="{{ noticia.data.imagen }}" alt="">
+          {% else %}
+          <div class="miniatura-color"><img src="/img/casas.svg" alt="" style="height:60px;width:100%;object-fit:cover;"></div>
+          {% endif %}
+        </div>
+        <div class="cuerpo">
+          <time datetime="{{ noticia.date }}">{{ noticia.date | fecha }}</time>
+          <h3>{{ noticia.data.title }}</h3>
+          {% if noticia.data.resumen %}<p>{{ noticia.data.resumen }}</p>{% endif %}
+          <span class="leer">Leer noticia →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="centro mt-40"><a class="boton boton-claro" href="/noticias/">Ver toda la actualidad</a></p>
+  </div>
+</section>
+
+<section class="seccion seccion-oscura">
+  <div class="contenedor">
+    <span class="etiqueta-seccion">El Patronato</span>
+    <h2 class="titulo">Un órgano de gobierno con las instituciones y el sector sentados a la misma mesa</h2>
+    <p class="intro">El Patronato reúne al Ayuntamiento de la Vila Joiosa, a la Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa, a HOSBEC y al Patronato Provincial de Turismo Costa Blanca.</p>
+    <div class="patronato-lista">
+      {% for m in patronato.miembros | limit(6) %}
+      <div class="miembro">
+        <h3>{{ m.nombre }}</h3>
+        <p class="cargo">{{ m.cargo }}</p>
+        <span class="entidad">{{ m.entidad }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="centro mt-40"><a class="boton boton-principal" href="/fundacion/#patronato">Ver el Patronato completo</a></p>
+  </div>
+</section>
+
+<section class="banda-cta">
+  <div class="contenedor">
+    <h2>¿Trabajas en el sector turístico de Villajoyosa? Hablemos.</h2>
+    <a class="boton boton-principal" href="/contacto/">Contactar con la Fundación</a>
+  </div>
+</section>

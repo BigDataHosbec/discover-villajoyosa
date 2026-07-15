@@ -1,0 +1,65 @@
+---
+layout: base.njk
+title: La Fundación
+permalink: /fundacion/
+descripcion: Qué es la Fundación Discover Villajoyosa, sus objetivos y su Patronato.
+---
+<div class="cabecera-pagina">
+  <div class="contenedor">
+    <p class="miga"><a href="/">Inicio</a> / La Fundación</p>
+    <h1>La Fundación</h1>
+    <p>Una entidad sin ánimo de lucro que une a la administración y al empresariado turístico para gestionar y promocionar el destino Villajoyosa.</p>
+  </div>
+  <div class="casas-mini" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
+</div>
+
+<section class="seccion">
+  <div class="contenedor texto-contenido">
+    <span class="etiqueta-seccion">Quiénes somos</span>
+    <h2 class="titulo">Origen y misión</h2>
+    <p class="intro">La Fundación Discover Villajoyosa —Fundación de Turismo de Villajoyosa de la Comunitat Valenciana— es una entidad público-privada sin ánimo de lucro constituida por el Ayuntamiento de la Vila Joiosa junto al empresariado turístico local.</p>
+    <p>Su Patronato celebró la primera reunión constitutiva el 15 de mayo de 2026 en la finca de la Barbera dels Aragonés, formalizando el inicio de actividad de su órgano de gobierno. Es la cuarta fundación de estas características creada en la Comunitat Valenciana, tras Visit Benidorm, la Fundación Turismo València y la de Montanejos.</p>
+    <p>La misión de la Fundación es mejorar la competitividad y la sostenibilidad del modelo turístico de Villajoyosa y posicionar el municipio como uno de los destinos más competitivos, sostenibles y atractivos del Mediterráneo, potenciando su patrimonio cultural, sus playas, su gastronomía y su identidad mediterránea.</p>
+    <h3>Cómo se financia</h3>
+    <p>El Ayuntamiento de la Vila Joiosa aporta el 49% del presupuesto de la entidad; el resto procede del sector privado. Este equilibrio garantiza que el empresariado tenga un papel protagonista en la toma de decisiones y que la promoción turística del municipio quede al margen del debate político, con continuidad en el tiempo.</p>
+  </div>
+</section>
+
+<section class="seccion seccion-alterna">
+  <div class="contenedor">
+    <span class="etiqueta-seccion">Objetivos</span>
+    <h2 class="titulo">Nuestras líneas de trabajo</h2>
+    <div class="lineas">
+      <div class="linea"><span class="num">01</span><h3>Promoción del destino</h3><p>Campañas de promoción turística nacionales e internacionales bajo la marca Discover Villajoyosa.</p></div>
+      <div class="linea"><span class="num">02</span><h3>Nuevos productos turísticos</h3><p>Diseño de experiencias en torno al patrimonio, las playas, la gastronomía y la tradición chocolatera.</p></div>
+      <div class="linea"><span class="num">03</span><h3>Sostenibilidad</h3><p>Un modelo turístico sostenible y equilibrado, que beneficie a visitantes y residentes.</p></div>
+      <div class="linea"><span class="num">04</span><h3>Competitividad</h3><p>Mejora de la competitividad del destino dentro de la Costa Blanca.</p></div>
+      <div class="linea"><span class="num">05</span><h3>Oportunidades e inversión</h3><p>Identificación de nuevas oportunidades de desarrollo e inversión turística.</p></div>
+      <div class="linea"><span class="num">06</span><h3>Alianzas</h3><p>Colaboración con instituciones, organismos y entidades del sector.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="patronato">
+  <div class="contenedor">
+    <span class="etiqueta-seccion">Órgano de gobierno</span>
+    <h2 class="titulo">El Patronato</h2>
+    <p class="intro">El Patronato está formado por {{ patronato.miembros.length }} miembros vinculados al ámbito institucional y empresarial. Su composición garantiza la colaboración real entre la administración pública y el sector turístico privado.</p>
+    <div class="patronato-lista">
+      {% for m in patronato.miembros %}
+      <div class="miembro miembro-claro">
+        <h3>{{ m.nombre }}</h3>
+        <p class="cargo">{{ m.cargo }}</p>
+        <span class="entidad">{{ m.entidad }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="banda-cta">
+  <div class="contenedor">
+    <h2>Consulta nuestros acuerdos, cuentas y convocatorias</h2>
+    <a class="boton boton-principal" href="/transparencia/">Ir al portal de transparencia</a>
+  </div>
+</section>

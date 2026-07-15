@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: Contratación
+permalink: /transparencia/contratacion/
+descripcion: Licitaciones y contrataciones de la Fundación Discover Villajoyosa.
+---
+<div class="cabecera-pagina">
+  <div class="contenedor">
+    <p class="miga"><a href="/">Inicio</a> / <a href="/transparencia/">Transparencia</a> / Contratación</p>
+    <h1>Contratación</h1>
+    <p>Expedientes de contratación de servicios y suministros: pliegos, plazos, adjudicaciones y formalizaciones.</p>
+  </div>
+  <div class="casas-mini" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
+</div>
+
+<section class="seccion">
+  <div class="contenedor">
+    {% if collections.contratacionDesc.length %}
+    <div class="lista-expedientes">
+      {% for item in collections.contratacionDesc %}
+      <div class="expediente">
+        <div class="expediente-cabecera">
+          <div>
+            <h3>{{ item.data.title }}</h3>
+            <div class="meta">
+              {% if item.data.expediente %}<span>Expediente: {{ item.data.expediente }}</span>{% endif %}
+              <span>Publicado: {{ item.date | fecha }}</span>
+              {% if item.data.importe %}<span>Importe: {{ item.data.importe }}</span>{% endif %}
+              {% if item.data.adjudicatario %}<span>Adjudicatario: {{ item.data.adjudicatario }}</span>{% endif %}
+            </div>
+          </div>
+          <span class="estado estado-{{ item.data.estado | claseEstado }}">{{ item.data.estado }}</span>
+        </div>
+        <div class="descripcion">{{ item.templateContent | safe }}</div>
+        {% if item.data.documentos.length %}
+        <div class="docs">
+          {% for doc in item.data.documentos %}
+          <a class="doc-enlace" href="{{ doc.archivo }}" target="_blank" rel="noopener">{{ doc.nombre }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="sin-contenido">Actualmente no hay expedientes de contratación publicados.</div>
+    {% endif %}
+  </div>
+</section>

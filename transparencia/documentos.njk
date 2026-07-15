@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Documentos e información institucional
+permalink: /transparencia/documentos/
+descripcion: Estatutos, cuentas, convenios y documentación institucional de la Fundación Discover Villajoyosa.
+---
+<div class="cabecera-pagina">
+  <div class="contenedor">
+    <p class="miga"><a href="/">Inicio</a> / <a href="/transparencia/">Transparencia</a> / Documentos</p>
+    <h1>Documentos</h1>
+    <p>Documentación institucional, económica, normativa y convenios de la Fundación.</p>
+  </div>
+  <div class="casas-mini" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
+</div>
+
+<section class="seccion">
+  <div class="contenedor">
+    {% if collections.documentosDesc.length %}
+      {% for cat in ["Institucional", "Económica", "Normativa", "Convenios"] %}
+        {% set items = collections.documentosDesc | porCategoria(cat) %}
+        {% if items.length %}
+        <div {% if cat == "Económica" %}id="economica"{% endif %}>
+          <span class="etiqueta-seccion" style="margin-top:28px">{{ cat }}</span>
+          <div class="lista-expedientes" style="margin-top:10px; margin-bottom:36px">
+            {% for item in items %}
+            <div class="expediente">
+              <div class="expediente-cabecera">
+                <div>
+                  <h3>{{ item.data.title }}</h3>
+                  <div class="meta"><span>Publicado: {{ item.date | fecha }}</span></div>
+                </div>
+              </div>
+              {% if item.templateContent | trim %}<div class="descripcion">{{ item.templateContent | safe }}</div>{% endif %}
+              {% if item.data.documento %}
+              <div class="docs"><a class="doc-enlace" href="{{ item.data.documento }}" target="_blank" rel="noopener">Descargar documento</a></div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+    <div class="sin-contenido">Todavía no hay documentos publicados en esta sección.</div>
+    {% endif %}
+  </div>
+</section>

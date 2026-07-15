@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Actualidad
+permalink: /noticias/
+descripcion: Noticias y comunicados de la Fundación Discover Villajoyosa.
+---
+<div class="cabecera-pagina">
+  <div class="contenedor">
+    <p class="miga"><a href="/">Inicio</a> / Actualidad</p>
+    <h1>Actualidad</h1>
+    <p>Noticias, comunicados y novedades de la Fundación Discover Villajoyosa.</p>
+  </div>
+  <div class="casas-mini" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
+</div>
+
+<section class="seccion">
+  <div class="contenedor">
+    {% if collections.noticiasDesc.length %}
+    <div class="tarjetas-noticias">
+      {% for noticia in collections.noticiasDesc %}
+      <a class="tarjeta-noticia" href="{{ noticia.url }}">
+        <div class="miniatura">
+          {% if noticia.data.imagen %}
+          <img src="{{ noticia.data.imagen }}" alt="">
+          {% else %}
+          <div class="miniatura-color"><img src="/img/casas.svg" alt="" style="height:60px;width:100%;object-fit:cover;"></div>
+          {% endif %}
+        </div>
+        <div class="cuerpo">
+          <time datetime="{{ noticia.date }}">{{ noticia.date | fecha }}</time>
+          <h3>{{ noticia.data.title }}</h3>
+          {% if noticia.data.resumen %}<p>{{ noticia.data.resumen }}</p>{% endif %}
+          <span class="leer">Leer noticia →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="sin-contenido">Todavía no hay noticias publicadas. Muy pronto encontrarás aquí la actualidad de la Fundación.</div>
+    {% endif %}
+  </div>
+</section>

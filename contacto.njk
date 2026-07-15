@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Contacto
+permalink: /contacto/
+descripcion: Contacta con la Fundación Discover Villajoyosa.
+---
+<div class="cabecera-pagina">
+  <div class="contenedor">
+    <p class="miga"><a href="/">Inicio</a> / Contacto</p>
+    <h1>Contacto</h1>
+    <p>¿Eres empresa turística, institución o medio de comunicación? Escríbenos y te responderemos lo antes posible.</p>
+  </div>
+  <div class="casas-mini" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
+</div>
+
+<section class="seccion">
+  <div class="contenedor contacto-grid">
+    <div>
+      <span class="etiqueta-seccion">Dónde estamos</span>
+      <div class="dato-contacto mt-40">
+        <p class="titulo-dato">Sede social</p>
+        <p>{{ general.direccion }}</p>
+      </div>
+      {% if general.email %}
+      <div class="dato-contacto">
+        <p class="titulo-dato">Correo electrónico</p>
+        <a href="mailto:{{ general.email }}">{{ general.email }}</a>
+      </div>
+      {% endif %}
+      {% if general.telefono %}
+      <div class="dato-contacto">
+        <p class="titulo-dato">Teléfono</p>
+        <a href="tel:{{ general.telefono | replace(' ', '') }}">{{ general.telefono }}</a>
+      </div>
+      {% endif %}
+    </div>
+    <div>
+      {% if general.web3forms_key %}
+      <form class="formulario" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="{{ general.web3forms_key }}">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde la web de la Fundación">
+        <input type="hidden" name="redirect" id="campo-redirect" value="">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="campo">
+          <label for="nombre">Nombre y apellidos</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="campo">
+          <label for="asunto">Asunto</label>
+          <input id="asunto" name="asunto" type="text" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+        </div>
+        <button class="boton boton-principal" type="submit">Enviar mensaje</button>
+        <script>document.getElementById("campo-redirect").value = location.origin + "/contacto/gracias/";</script>
+      </form>
+      {% else %}
+      <div class="formulario">
+        <p><strong>Escríbenos a nuestro correo:</strong></p>
+        <p style="margin-top:10px"><a class="boton boton-claro" href="mailto:{{ general.email }}">{{ general.email }}</a></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

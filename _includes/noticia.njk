@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<article class="articulo">
+  <a class="volver" href="/noticias/">← Volver a actualidad</a>
+  <time datetime="{{ page.date }}">{{ page.date | fecha }}</time>
+  <h1>{{ title }}</h1>
+  {% if resumen %}<p class="intro">{{ resumen }}</p>{% endif %}
+  {% if imagen %}
+  <div class="imagen-principal"><img src="{{ imagen }}" alt="{{ title }}"></div>
+  {% endif %}
+  <div class="contenido-articulo">
+    {{ content | safe }}
+  </div>
+</article>
