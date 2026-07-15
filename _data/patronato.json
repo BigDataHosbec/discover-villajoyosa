@@ -2,58 +2,58 @@
   "miembros": [
     {
       "nombre": "Marcos Zaragoza Mayor",
-      "cargo": "Alcalde de Villajoyosa",
-      "entidad": "Ayuntamiento de la Vila Joiosa"
+      "cargo": "Presidente",
+      "entidad": "Alcalde · Ayuntamiento de la Vila Joiosa"
     },
     {
-      "nombre": "Rosa Llorca",
-      "cargo": "Concejala de Turismo",
-      "entidad": "Ayuntamiento de la Vila Joiosa"
-    },
-    {
-      "nombre": "Andreu Verdú",
-      "cargo": "Concejal",
-      "entidad": "Ayuntamiento de la Vila Joiosa"
-    },
-    {
-      "nombre": "Magdalena Pérez",
-      "cargo": "Vocal",
+      "nombre": "Magdalena Pérez Llorca",
+      "cargo": "Vicepresidenta",
       "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
     },
     {
-      "nombre": "Celine Godard",
+      "nombre": "Celine Claudie Le Bigot",
       "cargo": "Vocal",
-      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+      "entidad": "Camping El Torres"
     },
     {
-      "nombre": "Jaime Orquín",
+      "nombre": "Rosa Llorca Pérez",
       "cargo": "Vocal",
-      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+      "entidad": "Concejala de Turismo · Ayuntamiento de la Vila Joiosa"
     },
     {
-      "nombre": "Josep Llorca",
+      "nombre": "Andreu Verdú Reos",
       "cargo": "Vocal",
-      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+      "entidad": "Concejal · Ayuntamiento de la Vila Joiosa"
     },
     {
-      "nombre": "José Medina",
+      "nombre": "José Mancebo Aracil",
       "cargo": "Vocal",
-      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
-    },
-    {
-      "nombre": "Germán Regalado",
-      "cargo": "Vocal",
-      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+      "entidad": "Director · Patronato Provincial de Turismo Costa Blanca"
     },
     {
       "nombre": "Nuria Montes de Diego",
-      "cargo": "Secretaria general de HOSBEC",
-      "entidad": "HOSBEC"
+      "cargo": "Vocal",
+      "entidad": "Secretaria General · HOSBEC"
     },
     {
-      "nombre": "José Mancebo",
-      "cargo": "Director",
-      "entidad": "Patronato Provincial de Turismo Costa Blanca"
+      "nombre": "Germán Regalado Pareja",
+      "cargo": "Vocal",
+      "entidad": "Paradisun"
+    },
+    {
+      "nombre": "Jaime Orquín Llinares",
+      "cargo": "Vocal",
+      "entidad": "Blue Line"
+    },
+    {
+      "nombre": "José Medina Terol",
+      "cargo": "Vocal",
+      "entidad": "Medina Hoteles"
+    },
+    {
+      "nombre": "Josep Llorca Gomis",
+      "cargo": "Vocal",
+      "entidad": "Seaward Suites"
     }
   ]
 }
