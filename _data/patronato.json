@@ -1,15 +1,59 @@
 {
   "miembros": [
-    { "nombre": "Marcos Zaragoza Mayor", "cargo": "Presidente del Patronato · Alcalde de Villajoyosa", "entidad": "Ayuntamiento de la Vila Joiosa" },
-    { "nombre": "Rosa Llorca", "cargo": "Concejala de Turismo", "entidad": "Ayuntamiento de la Vila Joiosa" },
-    { "nombre": "Andreu Verdú", "cargo": "Concejal", "entidad": "Ayuntamiento de la Vila Joiosa" },
-    { "nombre": "Magdalena Pérez", "cargo": "Vocal", "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa" },
-    { "nombre": "Celine Godard", "cargo": "Vocal", "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa" },
-    { "nombre": "Jaime Orquín", "cargo": "Vocal", "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa" },
-    { "nombre": "Josep Llorca", "cargo": "Vocal", "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa" },
-    { "nombre": "José Medina", "cargo": "Vocal", "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa" },
-    { "nombre": "Germán Regalado", "cargo": "Vocal", "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa" },
-    { "nombre": "Nuria Montes de Diego", "cargo": "Secretaria general de HOSBEC", "entidad": "HOSBEC" },
-    { "nombre": "José Mancebo", "cargo": "Director", "entidad": "Patronato Provincial de Turismo Costa Blanca" }
+    {
+      "nombre": "Marcos Zaragoza Mayor",
+      "cargo": "Alcalde de Villajoyosa",
+      "entidad": "Ayuntamiento de la Vila Joiosa"
+    },
+    {
+      "nombre": "Rosa Llorca",
+      "cargo": "Concejala de Turismo",
+      "entidad": "Ayuntamiento de la Vila Joiosa"
+    },
+    {
+      "nombre": "Andreu Verdú",
+      "cargo": "Concejal",
+      "entidad": "Ayuntamiento de la Vila Joiosa"
+    },
+    {
+      "nombre": "Magdalena Pérez",
+      "cargo": "Vocal",
+      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+    },
+    {
+      "nombre": "Celine Godard",
+      "cargo": "Vocal",
+      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+    },
+    {
+      "nombre": "Jaime Orquín",
+      "cargo": "Vocal",
+      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+    },
+    {
+      "nombre": "Josep Llorca",
+      "cargo": "Vocal",
+      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+    },
+    {
+      "nombre": "José Medina",
+      "cargo": "Vocal",
+      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+    },
+    {
+      "nombre": "Germán Regalado",
+      "cargo": "Vocal",
+      "entidad": "Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa"
+    },
+    {
+      "nombre": "Nuria Montes de Diego",
+      "cargo": "Secretaria general de HOSBEC",
+      "entidad": "HOSBEC"
+    },
+    {
+      "nombre": "José Mancebo",
+      "cargo": "Director",
+      "entidad": "Patronato Provincial de Turismo Costa Blanca"
+    }
   ]
 }
