@@ -1,8 +1,6 @@
-// Configuración de despliegue en Cloudflare (Workers con activos estáticos)
+// Configuración de despliegue en Cloudflare Pages
 {
   "name": "discover-villajoyosa-web",
   "compatibility_date": "2026-07-01",
-  "assets": {
-    "directory": "./_site"
-  }
+  "pages_build_output_dir": "_site"
 }

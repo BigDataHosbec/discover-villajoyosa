@@ -5,8 +5,7 @@
 
 backend:
   name: github
-  # >>> CAMBIAR: usuario/nombre del repositorio en GitHub <<<
-  repo: TU-USUARIO/discover-villajoyosa-web
+  repo: BigDataHosbec/discover-villajoyosa
   branch: main
   # >>> CAMBIAR: URL del Worker de autenticación (ver GUIA-PUESTA-EN-MARCHA.md) <<<
   base_url: https://sveltia-cms-auth.TU-SUBDOMINIO.workers.dev
