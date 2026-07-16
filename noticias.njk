@@ -10,7 +10,6 @@ descripcion: Noticias y comunicados de la Fundación Discover Villajoyosa.
     <h1>Actualidad</h1>
     <p>Noticias, comunicados y novedades de la Fundación Discover Villajoyosa.</p>
   </div>
-  <div class="casas-mini" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
 </div>
 
 <section class="seccion">
@@ -23,7 +22,7 @@ descripcion: Noticias y comunicados de la Fundación Discover Villajoyosa.
           {% if noticia.data.imagen %}
           <img src="{{ noticia.data.imagen }}" alt="">
           {% else %}
-          <div class="miniatura-color"><img src="/img/casas.svg" alt="" style="height:60px;width:100%;object-fit:cover;"></div>
+          <div class="miniatura-marca" aria-hidden="true"><span>Discover Villajoyosa</span></div>
           {% endif %}
         </div>
         <div class="cuerpo">

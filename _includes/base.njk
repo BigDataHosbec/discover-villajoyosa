@@ -8,12 +8,10 @@
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/estilos.css">
 </head>
 <body>
-  <div class="franja"></div>
-
   {% if portada.aviso_activo and portada.aviso_texto %}
   <div class="aviso">{{ portada.aviso_texto }}</div>
   {% endif %}
@@ -21,7 +19,8 @@
   <header class="cabecera">
     <div class="cabecera-inner">
       <a class="logo" href="/" aria-label="Inicio — {{ general.nombre }}">
-        <img src="/img/logo.svg" alt="{{ general.nombre }}">
+        <span class="logo-titulo">Discover Villajoyosa</span>
+        <span class="logo-sub">Fundación de Turismo</span>
       </a>
       <button class="menu-boton" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('abierto')">
         <span></span><span></span><span></span>
@@ -42,8 +41,9 @@
 
   <footer class="pie">
     <div class="pie-inner">
-      <div>
-        <img src="/img/logo-blanco.svg" alt="{{ general.nombre }}">
+      <div class="pie-marca">
+        <span class="logo-titulo">Discover Villajoyosa</span>
+        <span class="logo-sub">Fundación de Turismo</span>
         <p>{{ general.eslogan }}.<br>{{ general.direccion }}</p>
       </div>
       <div>

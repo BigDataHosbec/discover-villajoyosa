@@ -12,12 +12,11 @@ permalink: /
         <a class="boton boton-secundario" href="/transparencia/">Portal de transparencia</a>
       </div>
     </div>
-    <div class="hero-sello" aria-hidden="true">
-      <strong>2026</strong>
-      <span>Constituida en la<br>Barbera dels Aragonés<br>La Vila Joiosa</span>
+    <div class="hero-dato">
+      <span class="hero-dato-num">2026</span>
+      <span class="hero-dato-txt">Constituida en la Barbera dels Aragonés · La Vila Joiosa</span>
     </div>
   </div>
-  <div class="hero-casas" aria-hidden="true"><img src="/img/casas.svg" alt=""></div>
 </section>
 
 <section class="seccion">
@@ -62,7 +61,7 @@ permalink: /
           {% if noticia.data.imagen %}
           <img src="{{ noticia.data.imagen }}" alt="">
           {% else %}
-          <div class="miniatura-color"><img src="/img/casas.svg" alt="" style="height:60px;width:100%;object-fit:cover;"></div>
+          <div class="miniatura-marca" aria-hidden="true"><span>Discover Villajoyosa</span></div>
           {% endif %}
         </div>
         <div class="cuerpo">
