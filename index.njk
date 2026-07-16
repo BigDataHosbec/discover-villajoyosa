@@ -5,6 +5,7 @@ permalink: /
 <section class="hero">
   <div class="hero-inner">
     <div>
+      <p class="hero-overline">Villajoyosa · Costa Blanca · Mediterráneo</p>
       <h1>{{ portada.hero_titulo }}</h1>
       <p>{{ portada.hero_texto }}</p>
       <div class="hero-acciones">
@@ -12,9 +13,8 @@ permalink: /
         <a class="boton boton-secundario" href="/transparencia/">Portal de transparencia</a>
       </div>
     </div>
-    <div class="hero-dato">
-      <span class="hero-dato-num">2026</span>
-      <span class="hero-dato-txt">Constituida en la Barbera dels Aragonés · La Vila Joiosa</span>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="/img/emblema.svg" alt="">
     </div>
   </div>
 </section>
@@ -77,14 +77,14 @@ permalink: /
   </div>
 </section>
 
-<section class="seccion seccion-oscura">
+<section class="seccion seccion-alterna">
   <div class="contenedor">
     <span class="etiqueta-seccion">El Patronato</span>
     <h2 class="titulo">Un órgano de gobierno con las instituciones y el sector sentados a la misma mesa</h2>
     <p class="intro">El Patronato reúne al Ayuntamiento de la Vila Joiosa, a la Asociación de Profesionales de la Hostelería y Turismo de La Vila Joiosa, a HOSBEC y al Patronato Provincial de Turismo Costa Blanca.</p>
     <div class="patronato-lista">
       {% for m in patronato.miembros | limit(6) %}
-      <div class="miembro">
+      <div class="miembro miembro-claro">
         <h3>{{ m.nombre }}</h3>
         <p class="cargo">{{ m.cargo }}</p>
         <span class="entidad">{{ m.entidad }}</span>

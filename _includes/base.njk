@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}{{ general.nombre }}</title>
   <meta name="description" content="{{ descripcion or general.eslogan }}">
+  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ general.nombre }}">
+  <meta property="og:description" content="{{ descripcion or general.eslogan }}">
+  <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +25,7 @@
         <span class="logo-titulo">Discover Villajoyosa</span>
         <span class="logo-sub">Fundación de Turismo</span>
       </a>
-      <button class="menu-boton" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('abierto')">
+      <button class="menu-boton" aria-label="Abrir menú" aria-expanded="false" onclick="var n=document.querySelector('.nav');n.classList.toggle('abierto');this.setAttribute('aria-expanded', n.classList.contains('abierto'))">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" aria-label="Navegación principal">

@@ -60,10 +60,34 @@ descripcion: Contacta con la Fundación Discover Villajoyosa.
         <script>document.getElementById("campo-redirect").value = location.origin + "/contacto/gracias/";</script>
       </form>
       {% else %}
-      <div class="formulario">
-        <p><strong>Escríbenos a nuestro correo:</strong></p>
-        <p style="margin-top:10px"><a class="boton boton-claro" href="mailto:{{ general.email }}">{{ general.email }}</a></p>
-      </div>
+      <form class="formulario" id="form-correo">
+        <div class="campo">
+          <label for="nombre">Nombre y apellidos</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+        <div class="campo">
+          <label for="asunto">Asunto</label>
+          <input id="asunto" name="asunto" type="text" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+        </div>
+        <button class="boton boton-principal" type="submit">Enviar mensaje</button>
+        <p class="nota-formulario">Al pulsar «Enviar» se abrirá tu aplicación de correo con el mensaje ya preparado para {{ general.email }}.</p>
+      </form>
+      <script>
+        document.getElementById("form-correo").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var nombre = document.getElementById("nombre").value;
+          var asunto = document.getElementById("asunto").value;
+          var mensaje = document.getElementById("mensaje").value;
+          var cuerpo = "Nombre: " + nombre + "\n\n" + mensaje;
+          window.location.href = "mailto:{{ general.email }}" +
+            "?subject=" + encodeURIComponent(asunto) +
+            "&body=" + encodeURIComponent(cuerpo);
+        });
+      </script>
       {% endif %}
     </div>
   </div>
