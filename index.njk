@@ -2,7 +2,7 @@
 layout: base.njk
 permalink: /
 ---
-<section class="hero">
+<section class="hero{% if portada.hero_imagen %} hero-foto" style="background-image: linear-gradient(100deg, rgba(11,31,58,.94) 0%, rgba(11,31,58,.82) 45%, rgba(11,31,58,.55) 100%), url('{{ portada.hero_imagen }}'){% else %}"{% endif %}>
   <div class="hero-inner">
     <div>
       <p class="hero-overline">Villajoyosa · Costa Blanca · Mediterráneo</p>

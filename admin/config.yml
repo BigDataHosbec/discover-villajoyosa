@@ -116,6 +116,7 @@ collections:
         file: "_data/portada.json"
         fields:
           - { label: "Título grande de la portada", name: hero_titulo, widget: string }
+          - { label: "Fotografía de fondo de la portada", name: hero_imagen, widget: image, required: false, hint: "Opcional. Foto horizontal de al menos 1900 px de ancho. Si se deja vacía, la portada usa el fondo azul con el emblema." }
           - { label: "Texto bajo el título", name: hero_texto, widget: text }
           - { label: "Texto '¿Quiénes somos?'", name: que_es, widget: text }
           - { label: "Cifra 1 — número", name: cifra_1_numero, widget: string }

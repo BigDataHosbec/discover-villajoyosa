@@ -245,6 +245,14 @@ a:hover { color: var(--acento); }
   margin-bottom: var(--sp-3);
 }
 .hero-visual { display: none; }
+
+/* Hero con fotografía: velo azul marino para legibilidad del texto */
+.hero-foto {
+  background-size: cover;
+  background-position: center 65%;
+  background-repeat: no-repeat;
+}
+.hero-foto .hero-visual { display: none !important; }
 @media (min-width: 900px) {
   .hero-inner { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); padding: var(--sp-7) var(--sp-3); align-items: center; }
   .hero-visual { display: block; justify-self: end; }
