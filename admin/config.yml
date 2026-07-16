@@ -7,11 +7,10 @@ backend:
   name: github
   repo: BigDataHosbec/discover-villajoyosa
   branch: main
-  # >>> CAMBIAR: URL del Worker de autenticación (ver GUIA-PUESTA-EN-MARCHA.md) <<<
-  base_url: https://sveltia-cms-auth.TU-SUBDOMINIO.workers.dev
+  base_url: https://sveltia-cms-auth.bigdata-e09.workers.dev
 
 locale: es
-site_url: /
+site_url: https://discovervillajoyosa.org
 logo_url: /img/logo.svg
 
 media_folder: "uploads"
