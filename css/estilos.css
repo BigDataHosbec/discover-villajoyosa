@@ -731,38 +731,36 @@ form .boton { border: 0; font-family: inherit; }
 .pie-legal a { color: #94a3b8; }
 .pie-legal a:hover { color: var(--acento-linea); }
 
-/* ---------------------- Cabecera de página interior ------------------ */
+/* ---------------------- Cabecera de página interior ------------------
+   Banda institucional: azul marino compacto (más baja que el hero de la
+   home para mantener jerarquía) con filete dorado inferior como firma. */
 .cabecera-pagina {
-  background: linear-gradient(180deg, var(--gris-50), var(--blanco));
-  border-bottom: 1px solid var(--borde);
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-900));
+  color: var(--blanco);
+  border-bottom: 3px solid var(--acento-linea);
 }
-.cabecera-pagina .contenedor { padding-top: var(--sp-6); padding-bottom: var(--sp-6); }
+.cabecera-pagina .contenedor { padding-top: var(--sp-5); padding-bottom: var(--sp-5); }
+@media (min-width: 900px) {
+  .cabecera-pagina .contenedor { padding-top: var(--sp-6); padding-bottom: var(--sp-6); }
+}
 .cabecera-pagina h1 {
   font-family: var(--serif);
   font-weight: 600;
-  font-size: clamp(30px, 4.5vw, 46px);
+  font-size: clamp(28px, 4vw, 42px);
   line-height: 1.15;
-  color: var(--navy-900);
+  color: var(--blanco);
 }
-.cabecera-pagina h1::before {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 2px;
-  background: var(--acento);
-  margin-bottom: var(--sp-3);
-}
-.cabecera-pagina p { margin-top: var(--sp-2); font-size: 17px; line-height: 1.7; color: var(--texto-2); max-width: 64ch; }
+.cabecera-pagina p { margin-top: var(--sp-2); font-size: 16.5px; line-height: 1.7; color: #cbd5e1; max-width: 64ch; }
 .cabecera-pagina .miga {
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
-  margin-bottom: var(--sp-3);
-  color: var(--texto-3);
+  margin-bottom: var(--sp-2);
+  color: #94a3b8;
 }
-.cabecera-pagina .miga a { color: var(--acento); text-decoration: none; }
-.cabecera-pagina .miga a:hover { color: var(--navy-800); }
+.cabecera-pagina .miga a { color: var(--acento-linea); text-decoration: none; }
+.cabecera-pagina .miga a:hover { color: var(--blanco); }
 
 /* ------------------------------ Utilidades -------------------------- */
 .centro { text-align: center; }
